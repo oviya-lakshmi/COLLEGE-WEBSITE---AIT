@@ -1,0 +1,187 @@
+.signup-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-icon {
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-option {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #3AAFA9;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .role-option.selected {
+    background-color: #3AAFA9;
+    color: white;
+  }
+  
+  .role-option:hover {
+    background-color: #3AAFA9;
+    color: white;
+  }
+  
+  .form-check-input:checked {
+    background-color: #3AAFA9;
+    border-color: #3AAFA9;
+  }
+  
+  .btn-primary {
+    background-color: #3AAFA9;
+    border-color: #3AAFA9;
+    padding: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2B7A78;
+    border-color: #2B7A78;
+  }
+  
+  .form-control:focus {
+    border-color: #3AAFA9;
+    box-shadow: 0 0 0 0.25rem rgba(58, 175, 169, 0.25);
+  }
+  
+  .invalid-feedback {
+    display: block;
+  }
+  
+  .text-danger {
+    font-size: 0.875rem;
+  }
+  
+  .form-text {
+    font-size: 0.8rem;
+  }
+  
+  /* Alert styles */
+  .alert {
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  
+  /* Form group spacing */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Link styles */
+  a {
+    color: #3AAFA9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: #2B7A78;
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .signup-container {
+      padding: 1.5rem;
+      margin: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .role-selection {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .role-option {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Animation for success message */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .alert {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Password requirements styling */
+  .password-requirements {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+  }
+  
+  .password-requirements ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+  }
+  
+  .password-requirements li {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Privacy policy link styling */
+  .privacy-link {
+    font-weight: 500;
+    color: #3AAFA9;
+  }
+  
+  /* Loading state for button */
+  .btn-loading {
+    position: relative;
+    pointer-events: none;
+  }
+  
+  .btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+  }
+  
+  @keyframes button-loading-spinner {
+    from { transform: rotate(0turn); }
+    to { transform: rotate(1turn); }
+  }

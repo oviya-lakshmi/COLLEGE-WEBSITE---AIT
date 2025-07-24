@@ -1,0 +1,87 @@
+.circle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: moveCircles 10s infinite linear;
+}
+
+/* Circle Colors */
+.circle:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background: #3a7bd5;
+    top: 10%;
+    left: 5%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    background: #ffcc00;
+    top: 30%;
+    left: 20%;
+    animation-duration: 15s;
+}
+
+.circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    background: #3a6073;
+    top: 50%;
+    left: 50%;
+    animation-duration: 18s;
+}
+
+.circle:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    background: #ff6347;
+    top: 70%;
+    left: 10%;
+    animation-duration: 10s;
+}
+
+.circle:nth-child(5) {
+    width: 120px;
+    height: 120px;
+    background: #6a5acd;
+    top: 80%;
+    left: 75%;
+    animation-duration: 20s;
+}
+
+/* Animation Keyframes */
+@keyframes moveCircles {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(50vw, 50vh) scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(100vw, 100vh) scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Optimize for mobile */
+@media (max-width: 768px) {
+    .circle {
+        opacity: 0.5;
+        animation-duration: 20s;
+    }
+}

@@ -1,0 +1,110 @@
+/* Layout.css - Enhanced Responsive Layout */
+
+/* ===== Base Styles ===== */
+.main-content-container {
+  padding: 1rem;
+  min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+  position: relative;
+  z-index: 1; /* Ensure content stays above background elements */
+}
+
+.centered-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.narrow-centered {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .main-content-container {
+    padding: 1.5rem;
+  }
+  
+  .centered-content,
+  .narrow-centered {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .main-content-container {
+    padding: 2rem;
+  }
+  
+  .centered-content {
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+  
+  .narrow-centered {
+    max-width: 800px;
+    padding: 0 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .main-content-container {
+    padding: 2.5rem;
+  }
+  
+  .centered-content {
+    padding: 0;
+  }
+  
+  .narrow-centered {
+    padding: 0;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .main-content-container {
+    padding: 3rem;
+  }
+}
+
+/* ===== Special Cases ===== */
+
+/* Very small devices (less than 400px) */
+@media (max-width: 400px) {
+  .main-content-container {
+    padding: 0.75rem;
+    min-height: calc(100vh - 180px); /* Smaller header/footer */
+  }
+  
+  .centered-content,
+  .narrow-centered {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Tall screens (height over 1000px) */
+@media (min-height: 1000px) {
+  .main-content-container {
+    min-height: calc(100vh - 300px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .main-content-container {
+    padding: 0;
+    min-height: auto;
+  }
+  
+  .centered-content,
+  .narrow-centered {
+    max-width: 100%;
+    padding: 0;
+  }
+}
